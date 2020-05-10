@@ -9,7 +9,8 @@ export class UserController {
 
   @Post()
   async registerUser(@Body() payload: NewUserDto): Promise<User> {
-    const x = await this.userService.registerUser(payload);
-    return x;
+    const response = await this.userService.registerUser(payload);
+
+    return response;
   }
 }

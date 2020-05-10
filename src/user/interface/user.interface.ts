@@ -5,9 +5,8 @@ export interface User extends Document {
   fullName: string;
   mobile: string;
   email: string;
-  IDCard: object;
   registrationType: string;
-  noOfTickets: number;
+  numberOfTickets: number;
   registrationNumber: number;
   createdAt: Date;
 }

@@ -11,14 +11,8 @@ export class UserService {
   async registerUser(userDetail: NewUserDto): Promise<User> {
     const user = new this.userModel(userDetail);
 
-    console.log(`HERE: ${JSON.stringify(user)}`);
+    const response = user.save();
 
-    const date = new Date();
-    user.registrationNumber = date.getMilliseconds();
-    user.createdAt = date;
-
-    user.save();
-
-    return user;
+    return response;
   }
 }
