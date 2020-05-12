@@ -7,5 +7,5 @@ export const UserSchema = new mongoose.Schema({
   registrationType: { type: String, required: true },
   numberOfTickets: { type: Number, required: true },
   registrationNumber: { type: Number, required: true, default: Date.now() },
-  createdAt: { type: Date, required: true, default: new Date() },
+  registrationDate: { type: Date, required: true, default: new Date() },
 });

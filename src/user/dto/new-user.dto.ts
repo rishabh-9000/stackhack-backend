@@ -5,13 +5,13 @@ import {
   IsInt,
   MaxLength,
   IsIn,
-  IsAlpha,
+  MinLength,
 } from 'class-validator';
 
 export class NewUserDto {
   @IsNotEmpty()
   @MaxLength(100)
-  @IsAlpha()
+  @MinLength(4)
   readonly fullName: string;
 
   @IsNotEmpty()
@@ -29,6 +29,6 @@ export class NewUserDto {
 
   @IsNotEmpty()
   @IsInt()
-  @Max(10)
+  @Max(100)
   readonly numberOfTickets: number;
 }

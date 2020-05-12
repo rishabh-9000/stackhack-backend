@@ -8,5 +8,5 @@ export interface User extends Document {
   registrationType: string;
   numberOfTickets: number;
   registrationNumber: number;
-  createdAt: Date;
+  registrationDate: Date;
 }
