@@ -1,6 +1,6 @@
 import { Controller, Post, Body } from '@nestjs/common';
 import { AdminDto } from './dto/admin.dto';
-import { Admin } from './interface/admin.interface';
+import { Admin } from './models/admin.interface';
 import { AdminService } from './admin.service';
 
 @Controller('v1/admin')
