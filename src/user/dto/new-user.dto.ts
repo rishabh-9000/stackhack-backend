@@ -6,7 +6,9 @@ import {
   MaxLength,
   IsIn,
   MinLength,
+  IsObject,
 } from 'class-validator';
+import { ImageInfo } from '../models/user.interface';
 
 export class NewUserDto {
   @IsNotEmpty()
@@ -31,4 +33,8 @@ export class NewUserDto {
   @IsInt()
   @Max(100)
   readonly numberOfTickets: number;
+
+  @IsNotEmpty()
+  @IsObject()
+  readonly imageInfo: ImageInfo;
 }

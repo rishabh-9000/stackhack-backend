@@ -8,4 +8,5 @@ export const UserSchema = new mongoose.Schema({
   numberOfTickets: { type: Number, required: true },
   registrationNumber: { type: Number, required: true, default: Date.now() },
   registrationDate: { type: Date, required: true, default: new Date() },
+  imageInfo: { type: Object, required: true },
 });
