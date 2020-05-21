@@ -27,12 +27,12 @@ export class UserController {
   @Post('/upload-ID')
   @UseInterceptors(
     FileInterceptor('image', {
-      dest: 'src/assets',
+      dest: './../assets',
       limits: {
         fileSize: 2097152,
       },
       fileFilter(req, file, cb) {
-        if (file.mimetype.match(/\/(jpg|jpeg|png|gif)$/)) {
+        if (file.mimetype.match(/\/(jpg|JPG|jpeg|JPEG|png|PNG)$/)) {
           cb(null, true);
         } else {
           cb(
