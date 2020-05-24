@@ -26,7 +26,7 @@ export class NewUserDto {
   readonly email: string;
 
   @IsNotEmpty()
-  @IsIn(['self', 'group', 'corporate', 'others'])
+  @IsIn(['self', 'group', 'corporate', 'other'])
   readonly registrationType: string;
 
   @IsNotEmpty()
