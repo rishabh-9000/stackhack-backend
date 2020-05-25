@@ -8,6 +8,8 @@ export class ChartsController {
 
   @Get()
   async registrationTypes(): Promise<Count[]> {
-    return await this.chartsService.getRegistrationTypeCount();
+    const response = await this.chartsService.getRegistrationTypeCount();
+
+    return response;
   }
 }

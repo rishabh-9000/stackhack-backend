@@ -6,6 +6,7 @@ import {
   UploadedFile,
   HttpException,
   HttpStatus,
+  Get,
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { NewUserDto } from './dto/new-user.dto';
@@ -48,5 +49,12 @@ export class UserController {
   )
   uploadID(@UploadedFile() image): object {
     return image;
+  }
+
+  @Get()
+  async getAllUsers(): Promise<User[]> {
+    const response = await this.userService.getAllUsers();
+
+    return response;
   }
 }
