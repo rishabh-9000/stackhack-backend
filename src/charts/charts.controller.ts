@@ -1,15 +1,22 @@
 import { Controller, Get } from '@nestjs/common';
 import { ChartsService } from './charts.service';
-import { Count } from './models/count.interface';
 
 @Controller('v1/charts')
 export class ChartsController {
   constructor(private readonly chartsService: ChartsService) {}
 
   @Get()
-  async registrationTypes(): Promise<Count[]> {
+  async registrationTypes(): Promise<any> {
     const response = await this.chartsService.getRegistrationTypeCount();
 
-    return response;
+    const finalResponse: any = [];
+    response.forEach(item => {
+      const x: any = {};
+      x.label = item._id;
+      x.value = item.count;
+      finalResponse.push(x);
+    });
+
+    return finalResponse;
   }
 }

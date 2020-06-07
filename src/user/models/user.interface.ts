@@ -9,6 +9,7 @@ export interface User extends Document {
   numberOfTickets: number;
   registrationNumber: number;
   registrationDate: Date;
+  imageInfo: ImageInfo;
 }
 
 export interface ImageInfo {
