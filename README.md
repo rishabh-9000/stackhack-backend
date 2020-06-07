@@ -1,3 +1,8 @@
+## Prerequisite
+
+Node.js 12+ => https://nodejs.org/en/download/
+MongoDB 4+ => https://www.mongodb.com/try/download/community
+
 ## Get the project
 
 ```bash
@@ -22,3 +27,5 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+
+Note: MongoDB local server should be running.
